@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+html { background-color: black; }
+
+
+.boton5 {
+    background-image: url(../src/assets/pantalla1/btnoff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 818px;
+    height: 320px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.boton5:hover {
+    background-image: url(../src/assets/pantalla1/btnon.png);
+    
+  }
+
