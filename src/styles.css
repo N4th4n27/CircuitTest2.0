@@ -1,8 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
 html { background-color: black; }
-
-
-.boton5 {
+.boton {
     background-image: url(../src/assets/pantalla1/btnoff.png);
     background-size: cover;
     background-position: center;
@@ -14,8 +11,110 @@ html { background-color: black; }
     transition: all 0.5s;
     cursor: pointer;
   }
-.boton5:hover {
+.boton:hover {
     background-image: url(../src/assets/pantalla1/btnon.png);
     
   }
+  .boton2 {
+    background-image: url(../src/assets/pantalla2/btnoff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 620px;
+    height: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.boton2:hover {
+    background-image: url(../src/assets/pantalla2/btnon.png);
+    
+  }
 
+.sw {
+    background-image: url(../src/assets/pantalla2/sandwichoff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    height: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.sw:hover {
+    background-image: url(../src/assets/pantalla2/sandwichon.png);
+    
+  }
+.paleo {
+    background-image: url(../src/assets/pantalla2/carneoff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    height: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.paleo:hover {
+    background-image: url(../src/assets/pantalla2/carneon.png);
+    
+  }
+  .vg {
+    background-image: url(../src/assets/pantalla2/brocolioff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    height: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.vg:hover {
+    background-image: url(../src/assets/pantalla2/brocolion.png);
+    
+  }
+
+.vgn {
+    background-image: url(../src/assets/pantalla2/espinacaoff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    height: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.vgn:hover {
+    background-image: url(../src/assets/pantalla2/espinacaon.png);
+    
+  }
+  .vgn:active {
+    background-image: url(../src/assets/pantalla2/espinacaon.png);
+    
+  }
+
+.kto {
+    background-image: url(../src/assets/pantalla2/trigooff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    height: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.kto:hover {
+    background-image: url(../src/assets/pantalla2/trigoon.png);
+    
+  }
