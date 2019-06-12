@@ -1,1 +1,27 @@
 
+.test{
+
+    width: 200px;
+    height: 200px;
+    background-color: brown
+
+}
+
+
+.boton {
+    background-image: url(/assets/pantalla1/btnoff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 620px;
+    height: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+.boton:hover {
+    background-image: url(/assets/pantalla1/btnon.png);
+    
+  }
