@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DietacComponent } from './dietac/dietac.component';
 import { HomeComponent } from './home/home.component';
+import { CalculadComponent } from './calculad/calculad.component';
 
 
 
@@ -15,6 +16,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     DietacComponent,
     HomeComponent,
+    CalculadComponent,
     
     
 

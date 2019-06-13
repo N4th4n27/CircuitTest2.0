@@ -1,0 +1,15 @@
+<img src="assets\pantalla3\fondo3.png" 
+class="img-fluid" style="position: absolute; right: 0; top: 0; z-index: -100; 
+background-size: cover; background-position: center center; background-repeat: no-repeat;
+height: 100vh; width: 100%; ">
+
+
+
+<select style="position: absolute; top:33%; right:57%; height: 4vh; width: 13%;">
+<option *ngFor="let value of options" value="value">{{value}}</option>
+</select>
+  
+<a (click)="navigate()"  class="masc" style="position: absolute; top:35.999%;
+  right:65%; "></a>
+<a (click)="navigate()"  class="fem" style="position: absolute; top:35.99%;
+  right:49%; "></a>

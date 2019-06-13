@@ -1,0 +1,32 @@
+.masc {
+    background-image: url(/assets/pantalla3/btnmcoff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    height: 93px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.masc:hover {
+    background-image: url(/assets/pantalla3/btnmcon.png);
+    
+  }
+  .fem {
+    background-image: url(/assets/pantalla3/btnfemoff.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    height: 90px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+.fem:hover {
+    background-image: url(/assets/pantalla3/btnfemon.png);
+    
+  }
