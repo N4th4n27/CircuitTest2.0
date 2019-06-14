@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DietacComponent } from './dietac/dietac.component';
 import { HomeComponent } from './home/home.component';
 import { CalculadComponent } from './calculad/calculad.component';
+import { ResultadoComponent } from './resultado/resultado.component';
 
 
 
@@ -17,6 +18,7 @@ import { CalculadComponent } from './calculad/calculad.component';
     DietacComponent,
     HomeComponent,
     CalculadComponent,
+    ResultadoComponent,
     
     
 

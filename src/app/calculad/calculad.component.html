@@ -8,8 +8,43 @@ height: 100vh; width: 100%; ">
 <select style="position: absolute; top:33%; right:57%; height: 4vh; width: 13%;">
 <option *ngFor="let value of options" value="value">{{value}}</option>
 </select>
+
+<select style="position: absolute; top:25%; right:56%; height: 4vh; width: 13%;">
+  <option *ngFor="let value of alimentos" value="value">{{value}}</option>
+</select>
+
+<select style="position: absolute; top:74.1%; right:62.1%; height: 4vh; width: 13%;">
+  <option *ngFor="let value of fisica" value="value">{{value}}</option>
+</select>
+
+
+
+<div class="cc-selector" style="position: absolute; top:35%;
+right:44%; " > 
+  <input id="masc" type="radio" name="genero" value="masc" />
+  <label class="genero-cc masc" for="masc"></label>
+  <input id="fem" type="radio" name="genero" value="fem" />
+  <label class="genero-cc fem"for="fem"></label>
+</div>
+
+
+
+
+
+<input type="number" class="form-control transparent-input"   name="altura"
+  min="0" max="99" placeholder="Metros" style="position: absolute; top:49.89%;
+  right:77%; height: 3vh; width: 6%;">
   
-<a (click)="navigate()"  class="masc" style="position: absolute; top:35.999%;
-  right:65%; "></a>
-<a (click)="navigate()"  class="fem" style="position: absolute; top:35.99%;
-  right:49%; "></a>
+
+ 
+<input type="number" class="form-control transparent-input"  name="peso"
+  min="0" max="99" placeholder="Kg" style="position: absolute; top:57.2%;
+  right:82%;height: 4vh; width: 4%;  ">
+
+<input type="number" class="form-control transparent-input"  name="edad"
+min="0" max="99" placeholder="Años" style="position: absolute; top:65.19%;
+right:80%;height: 4vh; width: 6%;  ">
+
+
+<a (click)="navigate()" class="btncal" style="position: absolute; top:80%;
+right:44%; "></a>

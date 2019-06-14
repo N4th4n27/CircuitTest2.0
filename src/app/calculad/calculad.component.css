@@ -1,32 +1,74 @@
-.masc {
-    background-image: url(/assets/pantalla3/btnmcoff.png);
-    background-size: cover;
-    background-position: center;
-    display: inline-block;
-    border: none;
-    padding: 10px;
-    width: 250px;
-    height: 93px;
-    transition: all 0.5s;
-    cursor: pointer;
-  }
-.masc:hover {
-    background-image: url(/assets/pantalla3/btnmcon.png);
+
+
+.transparent-input {
+    background-color: rgba(0, 0, 0, 0);
+    border:none;
+    color: rgb(248, 248, 248);
+    font-size: 20px;
     
-  }
-  .fem {
-    background-image: url(/assets/pantalla3/btnfemoff.png);
-    background-size: cover;
-    background-position: center;
-    display: inline-block;
-    border: none;
-    padding: 10px;
-    width: 250px;
-    height: 90px;
-    transition: all 0.5s;
-    cursor: pointer;
-  }
-.fem:hover {
-    background-image: url(/assets/pantalla3/btnfemon.png);
-    
-  }
+ }
+
+.metros {
+  background-image: url(/assets/pantalla3/unidadM.png);
+  background-position: 7px 7px;
+  background-repeat: no-repeat;
+}
+
+ .btncal {
+  background-image: url(/assets/pantalla3/btncaloff.png);
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  padding: 5px;
+  width: 520px;
+  height: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.btncal:hover {
+  background-image: url(/assets/pantalla3/btncalon.png);
+  
+}
+
+.cc-selector input{
+  margin:0;padding:0;
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+}
+
+
+.masc {background-image: url(/assets/pantalla3/btnmcon.png);}
+.fem {background-image: url(/assets/pantalla3/btnfemon.png);}
+
+ 
+.cc-selector input:active +.genero-cc{opacity: .9;}
+.cc-selector input:checked +.genero-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.genero-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+background-position: center;
+padding: 10px;
+width: 250px;
+height: 93px;
+  -webkit-transition: all 100ms ease-in;
+     -moz-transition: all 100ms ease-in;
+          transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+     -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+          filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+
+.genero-cc:hover{
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+          filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
