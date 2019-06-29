@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import {CalculadoraService} from  '../calculadora.service';
 
 
 @Component({
@@ -15,13 +16,13 @@ export class CalculadComponent implements OnInit {
   foodTypeSelected : String;
   phisicActTypeSelected : String;
 
-  inputMeasureSelected : String;
   inputHSelected : String;
   inputWSelected : String;
   inputAgeSelected : String;
 
   generoSelected : String;
 
+  TMB:number;
 
   options = [
     'Selecciona una opcion', 
@@ -46,15 +47,22 @@ export class CalculadComponent implements OnInit {
     
   ]
 
-  constructor(private _router : Router ) { 
+  constructor(private _router : Router,  private cal:CalculadoraService) { 
  
     this.enableContinueButton();
-
+  
   }
  
   ngOnInit() {}
 
   navigate = () => {
+        //Continuo con la formula
+
+        let w = Number(this.inputWSelected);
+        let h = Number(this.inputHSelected);
+        let age = Number(this.inputAgeSelected);
+        this.TMB = this.cal.calculaFormula(w,h,age, this.generoSelected);
+        console.log("Este es el resultado del cálculo" +this.TMB);
 
     this._router.navigate(['/resultado'])
   
@@ -72,14 +80,6 @@ export class CalculadComponent implements OnInit {
 }
 setPhisicTypeType(value_of , value) {
   this.phisicActTypeSelected = value;
-  this.enableContinueButton();
-}
-
-
-setParameter() {
-  let value = (<HTMLInputElement>document.getElementById("metros")).value
-  console.log(value);
-  this.inputMeasureSelected = value;
   this.enableContinueButton();
 }
 
@@ -118,10 +118,13 @@ setFemale() {
 enableContinueButton()
 {
 
+//Aqui se valida el estatus del boton "Calcular" dependiendo de que todos los campos esten llenos.
+
   if (this.validation()){
-    console.log("isvalid")
+    console.log("todos los campos estan llenos boton cancelar habilitado")
+
   }else{
-    console.log("isINvalid")
+    console.log("boton cancelar deshabilitado")
   }
 
    let button = (<HTMLButtonElement>document.getElementById("continueButton"))
@@ -132,46 +135,50 @@ enableContinueButton()
 
 validation():boolean
 {
-  debugger
   // valida primero <select>
-  if(!this.objectiveTypeSelected 
-    || this.objectiveTypeSelected == this.firstElement){
-      return false;
-    }
-   if(!this.foodTypeSelected 
+  if(!this.foodTypeSelected 
     || this.foodTypeSelected == this.firstElement){
+      console.log("foodTypeSelected");
       return false;
    }
+
+  if(!this.objectiveTypeSelected 
+    || this.objectiveTypeSelected == this.firstElement){
+      console.log("objectiveTypeSelected");
+      return false;
+    }
+
+      //valida genero
+
+   if(!this.generoSelected
+    ||this.generoSelected.length <= 0){
+      console.log("generoSelected");
+      return false
+    }
+    //valida <input>
+    if(!this.inputHSelected 
+      || this.inputHSelected == this.tagZero){
+        console.log("inputHSelected");
+        return false;
+     }
+     if(!this.inputWSelected 
+      || this.inputWSelected == this.tagZero){
+        console.log("inputWSelected");
+        return false;
+     }
+     if(!this.inputAgeSelected 
+      || this.inputAgeSelected == this.tagZero){
+        console.log("inputAgeSelected");
+        return false;
+     }
+
+
+  //Valida actividad fisica
    if(!this.phisicActTypeSelected 
     || this.phisicActTypeSelected == this.firstElement){
       return false;
    }
-   // valida  <imput>
-
-   if(!this.inputMeasureSelected 
-    || this.inputMeasureSelected == this.tagZero){
-      return false;
-   }
-   if(!this.inputHSelected 
-    || this.inputHSelected == this.tagZero){
-      return false;
-   }
-   if(!this.inputWSelected 
-    || this.inputWSelected == this.tagZero){
-      return false;
-   }
-   if(!this.inputAgeSelected 
-    || this.inputAgeSelected == this.tagZero){
-      return false;
-   }
-
-   //valida genero
-
-   if(!this.generoSelected
-    ||this.generoSelected.length <= 0){
-      return false
-    }
-
+  
    return true;
 }
   
